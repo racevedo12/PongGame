@@ -1,6 +1,6 @@
 # PongGame
 
-Hello Everyone! I hope that you enjoy my pong game made with python.
+# Hello Everyone! I hope that you enjoy my pong game made with python.
 
 ## Left Paddle Movement
 ### To move the left paddle use the W key to go up, and S key to go down.

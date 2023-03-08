@@ -4,25 +4,29 @@ from ball import Ball
 from scoreboard import Scoreboard
 import time
 
+# Setting up the Screen
 theScreen = Screen()
 theScreen.bgcolor("black")
 theScreen.setup(width=800, height=600)
 theScreen.title("Pong Game")
 theScreen.tracer(0)
 
-paddleRight = Paddle((350, 0))
-paddleLeft = Paddle((-350, 0))
+# Setting up the paddles, and ball starting positions
+paddleRight = Paddle( (350, 0) )
+paddleLeft = Paddle( (-350, 0) )
 theBall = Ball()
 
+# Showing the Scoreboard
 theScore = Scoreboard()
 
+# Listening for the key presses from the users
 theScreen.listen()
 theScreen.onkeypress(paddleRight.goUp, "Up")
 theScreen.onkeypress(paddleRight.goDown, "Down")
 theScreen.onkeypress(paddleLeft.goUp, "w")
 theScreen.onkeypress(paddleLeft.goDown, "s")
 
-
+# Need to add an ending score and check the collisions with paddles
 keepGoing = True
 while keepGoing:
     time.sleep(theBall.theMoveSpeed)
